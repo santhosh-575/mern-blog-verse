@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-
+import NavBar from './NavBar.jsx'
+import { Eye } from 'lucide-react';
 function Home() {
 
     const posts = [{
@@ -59,19 +60,22 @@ function Home() {
     }]
 
     return (
+            <div><NavBar/>
+
         <div className="min-h-screen flex flex-col items-center pt-5 bg-gray-50">
+            
             <p className="text-4xl font-bold">Welcome back, Dev Astra</p>
             <p className="text-lg text-gray-500 mt-4"> Discover amazing stories, insights, and ideas from our community of writers.</p>
             <div className=" flex gap-10 justify-around mt-5 ">
                 <button className="px-10 py-4 cursor-pointer bg-blue-700 hover:bg-blue-900 shadow-md text-white rounded-md">Write a New Post</button>
                 <button className="px-10 py-4 cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-md" >View My Posts</button>
             </div>
-            <div className="mt-5 flex gap-10 flex-wrap justify-center w-full rounded-lg shadow-lg pb-5">
+            <div className="mt-5 flex gap-10 flex-wrap justify-center w-full rounded-lg shadow-lg pb-5 ">
                 {
                     posts.map((post) => (
-                        <div className="w-96 bg-white shadow-lg rounded-lg" key={post.id}>
-                            <div className="relative">
-                                <img className=" rounded-t-lg  shadow-lg h-52 w-96 " src={post.Image} alt="Writing" />
+                        <div className="w-96 bg-white shadow-lg rounded-lg   transform hover:scale-105 duration-500 ease-in-out" key={post.id}>
+                            <div className="relative overflow-hidden">
+                                <img className=" rounded-t-lg  transform hover:scale-120 duration-500 ease-in-out shadow-lg h-52 w-96 " src={post.Image} alt="Writing" />
                                 <button className="p-3 text-sm bg-white rounded-full absolute cursor-pointer right-4 top-3">Save</button>
                             </div>
                             <div className="flex gap-5 mt-3 px-2">
@@ -94,6 +98,7 @@ function Home() {
                 }
 
             </div>
+        </div>
         </div>
     )
 }
