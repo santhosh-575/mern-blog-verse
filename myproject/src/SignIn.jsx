@@ -18,7 +18,7 @@ const SignIn = () => {
                 <h1 className=" font-bold"> BlogVerse </h1>
                 <div className='relative'>
                 <House className='absolute right-15'/>
-                <Link to="/home" className="border-0 font-semibold hover:bg-gray-300 rounded-2xl cursor-pointer p-2"> Home </Link></div>
+                <Link to="/" className="border-0 font-semibold hover:bg-gray-300 rounded-2xl cursor-pointer p-2"> Home </Link></div>
                 <div className="flex gap-3 ">
                     <Link to="/signin" className="font-semibold cursor-pointer" >Sign In</Link>
                     <Link to="/signup" className="border-0 text-white bg-blue-500 cursor-pointer p-2 rounded-4xl hover:bg-blue-900">Sign Up</Link>
