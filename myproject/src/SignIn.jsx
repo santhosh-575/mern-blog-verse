@@ -24,38 +24,67 @@ const SignIn = () => {
                     <Link to="/signup" className="border-0 text-white bg-blue-500 cursor-pointer p-2 rounded-4xl hover:bg-blue-900">Sign Up</Link>
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center h-screen bg-blue-50 border-0 ">
-                <div className="h-140 w-110 rounded-3xl flex items-center justify-center flex-col shadow-2xl  bg-white shadow-gray-400 ">
-                    <p className="text-3xl font-bold pt-10">Sign In</p><br />
-                    <p className="font-semibold">Access your account</p>
-                    <div className="m-10  ">
-                        <form className="">
-                            <p className="p-1">Email Address</p>
-                            <div className='relative'>
-                            <input type="text" name='name' placeholder="Sample@gmail.com" className="border-1 p-3 pl-10 rounded-xl w-90" />
-                            <Mail className='absolute  left-3 top-3 text-gray-400' /></div>
-                            <p className="p-1 pt-5">Password</p>
-                            <div className='relative'>
-                                <input type={showPassword ? "text" : "password"} placeholder="Sample123" name='password' className="border-1 p-3 pl-10 rounded-xl w-90" />
-                                <LockKeyhole className='absolute left-3 top-3 text-gray-400'/><p onClick={handlePassword}>{showPassword ? <Eye className='absolute  right-3 top-3 text-gray-400'/> : <EyeOff className='absolute  right-3 top-3 text-gray-400'/>}</p>&nbsp;</div>
-                            <div className="flex ">
-                                <p><input type="checkbox" className=" m-3" />Remember me? </p>
-                                <p className="text-blue-700  font-semibold m-2 pl-18">forget password</p>
-                            </div>
-                            <div className="gap-0.5"></div>
-                            <button className="border-1 rounded-xl w-90 h-13 bg-blue-700 font-bold hover:bg-blue-900   text-white">Sign In</button>
-                            <div className="border-1 w-90 mt-4 border-gray-500"></div>
-
-                            <div className="flex">
-                                <p className="text-gray-500 pl-1 pt-4">Don't have an account? </p>
-                                <p className="text-blue-700 pl-2 pt-4 font-semibold">Create one here </p>
-
-                            </div>
-                        </form>
-                    </div>
-
+            <div className="flex flex-col justify-center items-center h-screen bg-blue-50 border-0">
+    <div className="h-auto w-full sm:w-[80%] md:w-[60%] lg:w-[40%] rounded-3xl flex items-center justify-center flex-col shadow-2xl bg-white shadow-gray-400 px-4 py-10">
+        <p className="text-3xl font-bold">Sign In</p>
+        <p className="font-semibold text-lg">Access your account</p>
+        
+        <div className="w-full max-w-md mt-10">
+            <form>
+                {/* Email Field */}
+                <p className="p-1">Email Address</p>
+                <div className="relative w-full">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Sample@gmail.com" 
+                        className="border border-gray-300 p-3 pl-10 rounded-xl w-full" 
+                    />
+                    <Mail className="absolute left-3 top-3 text-gray-400 text-sm sm:text-base md:text-lg" />
                 </div>
-            </div>
+
+                {/* Password Field */}
+                <p className="p-1 pt-5">Password</p>
+                <div className="relative w-full">
+                    <input 
+                        type={showPassword ? "text" : "password"} 
+                        name="password" 
+                        placeholder="Sample123" 
+                        className="border border-gray-300 p-3 pl-10 rounded-xl w-full" 
+                    />
+                    <LockKeyhole className="absolute left-3 top-3 text-gray-400 text-sm sm:text-base md:text-lg" />
+                    <p onClick={handlePassword} className="absolute right-3 top-3 text-gray-400 cursor-pointer">
+                        {showPassword ? <Eye className="text-lg sm:text-xl md:text-2xl" /> : <EyeOff className="text-lg sm:text-xl md:text-2xl" />}
+                    </p>
+                </div>
+
+                {/* Remember Me & Forgot Password */}
+                <div className="flex justify-between items-center mt-4">
+                    <div className="flex items-center">
+                        <input type="checkbox" className="m-3" />
+                        <p className="text-sm">Remember me?</p>
+                    </div>
+                    <p className="text-blue-700 font-semibold text-sm">Forgot password?</p>
+                </div>
+
+                {/* Sign In Button */}
+                <button className="w-full mt-4 py-3 bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-900">
+                    Sign In
+                </button>
+
+                {/* Divider */}
+                <div className="border-b mt-4 border-gray-500"></div>
+
+                {/* Create Account Link */}
+                <div className="flex justify-center mt-4">
+                    <p className="text-gray-500">Don't have an account? </p>
+                    <p className="text-blue-700 font-semibold pl-2">Create one here</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
         </>
 

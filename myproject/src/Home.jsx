@@ -57,13 +57,30 @@ function Home() {
         content: "TypeScript is a superset of JavaScript that adds static typing and other features to enhance developer productivity. This introduction will cover the basics of TypeScript and how to get started.",
         Image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         profilePic: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    },{
+        id: 7,
+        title: "Mastering Flexbox for Layout Design",
+        author: "Leela Avinash",
+        timeRead:" 10 min read",
+        postedOn: "Sep 15, 2023",
+        content: "Flexbox is a powerful layout module in CSS that allows for flexible and responsive design. This article will guide you through the basics of Flexbox and how to use it effectively in your projects.",
+        Image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        profilePic: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    }, {
+        id: 8,
+        title: "Introduction to TypeScript for JavaScript Developers",
+        author:"Charan Teja",
+        timeRead:" 9 min read",
+        postedOn: "Aug 10, 2023",
+        content: "TypeScript is a superset of JavaScript that adds static typing and other features to enhance developer productivity. This introduction will cover the basics of TypeScript and how to get started.",
+        Image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        profilePic: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     }]
 
     return (
             <div><NavBar/>
 
         <div className="min-h-screen flex flex-col items-center pt-5 bg-gray-50">
-            
             <p className="text-4xl font-bold">Welcome back, Dev Astra</p>
             <p className="text-lg text-gray-500 mt-4"> Discover amazing stories, insights, and ideas from our community of writers.</p>
             <div className=" flex gap-10 justify-around mt-5 ">
@@ -75,7 +92,7 @@ function Home() {
                     posts.map((post) => (
                         <div className="w-96 bg-white shadow-lg rounded-lg   transform hover:scale-105 duration-500 ease-in-out" key={post.id}>
                             <div className="relative overflow-hidden">
-                                <img className=" rounded-t-lg  transform hover:scale-120 duration-500 ease-in-out shadow-lg h-52 w-96 " src={post.Image} alt="Writing" />
+                                <img className=" rounded-t-lg  transform hover:scale-120 duration-500 ease-in-out shadow-lg h-52 w-[96%] " src={post.Image} alt="Writing" />
                                 <button className="p-3 text-sm bg-white rounded-full absolute cursor-pointer right-4 top-3">Save</button>
                             </div>
                             <div className="flex gap-5 mt-3 px-2">
